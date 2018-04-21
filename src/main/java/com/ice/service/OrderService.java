@@ -21,7 +21,7 @@ public interface OrderService {
 	
 	
 	/**
-	 * 查询订单列表
+	 * 查询某个人订单列表
 	 */
 	
 	Page<OrderDTO> findList(String buyerOpenid ,Pageable pageable);
@@ -43,4 +43,10 @@ public interface OrderService {
 	 */
 	
 	OrderDTO paid (OrderDTO orderDTO);
+	
+	
+	/**
+	 * 查询全部的订单列表
+	 */
+	Page<OrderDTO> findList(Pageable pageable);
 }

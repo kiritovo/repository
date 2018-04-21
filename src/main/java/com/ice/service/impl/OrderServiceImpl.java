@@ -226,5 +226,13 @@ public class OrderServiceImpl implements OrderService {
 		
 		return orderDTO;
 	}
+	@Override
+	public Page<OrderDTO> findList(Pageable pageable) {
+		Page<OrderMaster> orderMasterPage = masterDao.findAll(pageable);
+		List<OrderDTO> orderDTOList = OrderMasterTOrderDTO.convert(orderMasterPage.getContent());
+		Page<OrderDTO> orderDTOPage =new PageImpl<OrderDTO>(orderDTOList,pageable,orderMasterPage.getTotalElements());//入参是集合+分页格式+一共多少个元素(集合元素个数
+		
+	    return orderDTOPage;
+	}
 
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.ice.PayServiceImplTest;
 import com.ice.dto.OrderDTO;
 import com.ice.service.PayService;
+import com.ice.util.JsonUtil;
 import com.lly835.bestpay.enums.BestPayTypeEnum;
 import com.lly835.bestpay.model.PayRequest;
 import com.lly835.bestpay.model.PayResponse;
@@ -32,7 +33,7 @@ public class PayServiceImpl implements PayService {
 		payRequest.setPayTypeEnum(BestPayTypeEnum.WXPAY_H5);//支付方式的选择   这里用微信h5
 		logger.info("[微信支付]  request={}",payRequest);
 		PayResponse payResponse = bestPayService.pay(payRequest);
-		logger.info("[微信支付 response] ={}",payResponse);
+		logger.info("[微信支付 response] ={}",JsonUtil.toJson(payResponse));
 		
 		
 		
