@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ice.PayServiceImplTest;
+
 import com.ice.dto.OrderDTO;
 import com.ice.service.PayService;
 import com.ice.util.JsonUtil;

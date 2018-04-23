@@ -82,14 +82,14 @@ public class OrderServiceImplTest {
 //		 OrderDTO orderDTO = impl.findOne(ORDER_ID);
 //		 OrderDTO request = impl.paid(orderDTO);
 //		 System.out.println(request.getPayStatus().equals( PayStatusEnum.SUCCESS.getCode()));//Assert.assertEquals(expected, actual);
-	 }
+	 }	
 	 
 	 @Test
 	 public void list(){
 		 PageRequest request =new PageRequest(0, 2);
 		 Page<OrderDTO> orderDTOPage =impl.findList(request);
 		 System.out.println(orderDTOPage.getTotalElements());
-		 Assert.assertTrue("查询所有的订单列表", true);	 //orderDTOPage.getTotalElements()
+		 Assert.assertTrue("查询所有的订单列表", orderDTOPage.getTotalElements() > 0);	   //出错会吧出错信息打印出来  可以比较统一
 		 
 		 
 	 }
