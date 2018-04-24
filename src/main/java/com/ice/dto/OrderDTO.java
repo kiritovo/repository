@@ -4,8 +4,12 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.ice.entity.OrderDetail;
+import com.ice.enums.OrderStatusEnum;
+import com.ice.enums.PayStatusEnum;
+import com.ice.util.EnumUtil;
 
 /**
  * DTO =data transform object 数据传输用的实体
@@ -52,6 +56,25 @@ public class OrderDTO {
     private List<OrderDetail>  orderDetailList;  //这里直接初始化的话  返回的就是[]  不是null了
 
 	
+   
+    //code转化汉字的方法
+    @JsonIgnore
+    public OrderStatusEnum getOrderStatusEnum(){
+    	return EnumUtil.getByCode(orderStatus, OrderStatusEnum.class);
+    }
+    @JsonIgnore
+    public PayStatusEnum getPayStatusEnum(){
+    	return EnumUtil.getByCode(payStatus, PayStatusEnum.class);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     public List<OrderDetail> getOrderDetailList() {
