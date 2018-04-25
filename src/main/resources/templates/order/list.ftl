@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="row clearfix">
 			<div class="col-md-12 column">
-				<table class="table table-bordered">
+				<table class="table table-bordered" >
 					<thead>
 						<tr>
 							<th>订单id</th>
@@ -33,7 +33,7 @@
 							<td>${orderDTO.getOrderStatusEnum().message}</td>
                             <td>${orderDTO.getPayStatusEnum().message}</td>
 							<td>${orderDTO.createTime}</td>
-							<td>详情</td>
+							<td><a href="/sell/order/detail?orderId=${orderDTO.orderId}">详情</a></td>
 							<td>
 							   <#if  orderDTO.getOrderStatusEnum().message =="新订单">
 							       <a href="/sell/order/cancel?orderId=${orderDTO.orderId}">取消</a>    
