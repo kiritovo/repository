@@ -8,14 +8,16 @@ import javax.persistence.Id;
 
 import org.hibernate.annotations.DynamicUpdate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ice.enums.ProductStatusEnum;
+import com.ice.util.EnumUtil;
 /**
  * 商品
  * @author 雪糕
  *
  */
 @Entity
-@DynamicUpdate
+@DynamicUpdate       //时间自动更新
 public class ProductInfo {
    
 	@Id
@@ -45,6 +47,19 @@ public class ProductInfo {
     private Date createTime;
 
     private Date updateTime;
+    
+    @JsonIgnore
+    public ProductStatusEnum getProductStatusEnum(){
+    	return EnumUtil.getByCode(productStatus, ProductStatusEnum.class);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 
 	public String getProductId() {
 		return productId;

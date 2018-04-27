@@ -5,7 +5,7 @@ package com.ice.enums;
  * @author 雪糕
  *
  */
-public enum ProductStatusEnum {
+public enum ProductStatusEnum implements CodeEnum {
     UP(0,"在架"),
 	DOWN(1,"下架")
 	;

@@ -37,4 +37,12 @@ public interface ProductService {
 	    void increaseStock(List<ShopCarDTO> shopcarDTO);
 	     
 	    void decreaseStock(List<ShopCarDTO> shopcarDTO);
+	    
+	    
+	    
+	    
+	    //上下架
+	    ProductInfo onSale(String productId);
+	    
+	    ProductInfo offSale(String productId);
 }

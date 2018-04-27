@@ -12,7 +12,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.ice.entity.ProductInfo;
+import com.ice.enums.ProductStatusEnum;
 import com.ice.service.impl.ProductServiceImpl;
+
+import junit.framework.Assert;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -23,23 +26,30 @@ public class ProductServiceImplTest {
 	
 	@Test
 	public void findOne() throws Exception{
-		ProductInfo productInfo =impl.findOne("233");
-		System.out.println(productInfo.getProductName());
+//		ProductInfo productInfo =impl.findOne("233");
+//		System.out.println(productInfo.getProductName());
 	}
 	@Test
 	public void findUpAll() throws Exception{
-		  List<ProductInfo> list =impl.findUpAll();
-		   System.out.println(list.size());
+//		  List<ProductInfo> list =impl.findUpAll();
+//		   System.out.println(list.size());
 	}
 	@Test
 	public void findAll() throws Exception{
-		PageRequest request =new PageRequest(0, 2);  //page,size
-		Page<ProductInfo> page =impl.findAll(request);
-		System.out.println(page.getTotalElements());
+//		PageRequest request =new PageRequest(0, 2);  //page,size
+//		Page<ProductInfo> page =impl.findAll(request);
+//		System.out.println(page.getTotalElements());
 	}
 	@Test
 	public void save() throws Exception{
-		         ProductInfo info =new ProductInfo("234","烤鸡",new BigDecimal(35),2,"快来吃个烤鸡吧","www.baidu.com",0,2);
-                 impl.save(info);		       
+//		         ProductInfo info =new ProductInfo("234","烤鸡",new BigDecimal(35),2,"快来吃个烤鸡吧","www.baidu.com",0,2);
+//                 impl.save(info);		       
+	}
+	
+	@Test
+	public void onSale(){
+//	        ProductInfo result = impl.onSale("00001");
+//	        System.out.println(result);
+//	        Assert.assertEquals(ProductStatusEnum.UP, result.getProductStatusEnum());      
 	}
 }

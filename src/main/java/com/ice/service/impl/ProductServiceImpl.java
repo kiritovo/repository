@@ -80,4 +80,40 @@ public class ProductServiceImpl implements ProductService{
 		
 	}
 
+	
+	/**
+	 * 商品上架的方法
+	 */
+	@Override
+	public ProductInfo onSale(String productId) {
+		ProductInfo productInfo = dao.findOne(productId);
+		 if(productInfo ==null){
+			 throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+		 }
+		 
+		 if(productInfo.getProductStatusEnum() == ProductStatusEnum.UP){
+			 throw new SellException(ResultEnum.PRODUCT_STATUS_ERRPR);
+		 }
+		 productInfo.setProductStatus(ProductStatusEnum.UP.getCode());
+		 
+		 return dao.save(productInfo);
+	}
+	/**
+	 *商品下架的方法 
+	 */
+	@Override
+	public ProductInfo offSale(String productId) {
+		ProductInfo productInfo = dao.findOne(productId);
+		 if(productInfo ==null){
+			 throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+		 }
+		 
+		 if(productInfo.getProductStatusEnum() == ProductStatusEnum.DOWN){
+			 throw new SellException(ResultEnum.PRODUCT_STATUS_ERRPR);
+		 }
+		 productInfo.setProductStatus(ProductStatusEnum.DOWN.getCode());
+		 
+		 return dao.save(productInfo);
+	}
+
 }
