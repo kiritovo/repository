@@ -1,7 +1,7 @@
 {
   "errno": 0,
   "data": {
-    "name": "雪糕小铺（丰台）",
+    "name": "雪糕小铺（临汾）",
     "description": "蜗牛快送",
     "deliveryTime": 38,
     "score": 4.2,
@@ -20,7 +20,7 @@
       },
       {
         "type": 1,
-        "description": "透心凉雪碧全场8折"
+        "description": "透心凉心飞扬雪碧全场8折"
       },
       {
         "type": 2,
@@ -35,7 +35,7 @@
         "description": "已加入“外卖保”计划,食品安全保障"
       }
     ],
-    "avatar": "http://192.168.10.137:8081/img/touxiang.jpg",
+    "avatar": "http://192.168.0.100:8081/img/touxiang.jpg",
     "pics": [
       "http://fuss10.elemecdn.com/8/71/c5cf5715740998d5040dda6e66abfjpeg.jpeg?imageView2/1/w/180/h/180",
       "http://fuss10.elemecdn.com/b/6c/75bd250e5ba69868f3b1178afbda3jpeg.jpeg?imageView2/1/w/180/h/180",

@@ -17,7 +17,11 @@ import com.ice.dto.OrderDTO;
 import com.ice.enums.ResultEnum;
 import com.ice.exception.SellException;
 import com.ice.service.OrderService;
-
+/**
+ * 卖家端订单的操作
+ * @author 雪糕
+ *
+ */
 @Controller
 @RequestMapping("/order")
 public class SellOrderController {
