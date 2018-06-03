@@ -37,6 +37,7 @@
 												<td>${productDTO.productId}</td>
 												<td>${productDTO.productName}</td>
 												<td><img height="100"  width="100" src="${productDTO.productIcon}"/></td>
+												<td>${productDTO.productPrice}元</td>
 												<td>${productDTO.productStock}</td>
 												<td>${productDTO.productDescription}</td>
 												<td>${productDTO.categoryType}</td>
