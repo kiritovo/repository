@@ -8,7 +8,7 @@
       "score": 5,
       "rateType": 0,
       "text": "这家的饭超好吃！！！食材很新鲜 咖喱味也很正宗~给老板笔芯！",
-      "avatar": "http://192.168.10.137:8081/img/wzz.jpg",
+      "avatar": "http://127.0.0.1:8081/img/wzz.jpg",
       "recommend": [
         "咖喱鸡肉饭"
       ]
@@ -20,7 +20,7 @@
       "score": 3,
       "rateType": 0,
       "text": "太辣了 辣死了",
-      "avatar": "http://192.168.10.137:8081/img/wpf.jpg",
+      "avatar": "http://127.0.0.1:8081/img/wpf.jpg",
       "recommend": [
         "家常豆腐",
         "茄子鸡丁"
@@ -32,7 +32,7 @@
       "score": 4,
       "rateType": 1,
       "text": "口味不错，超过三十还有优惠，下次还在这里点",
-      "avatar": "http://192.168.10.137:8081/img/wjt.jpg",
+      "avatar": "http://127.0.0.1:8081/img/wjt.jpg",
       "recommend": [
         "西红柿鸡蛋",
         "回锅肉",
